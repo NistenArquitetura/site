@@ -1,5 +1,13 @@
+import Header from "../../components/Header";
+import AboutSection from "../../sections/AboutSection";
+
 export default function Home(){
   return(
-    <div>home</div>
+    <>
+      <Header/>
+      <main>
+        <AboutSection/>
+      </main>
+    </>
   )
 }
