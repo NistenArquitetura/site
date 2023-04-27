@@ -1,0 +1,47 @@
+@use '../../styles/variables'
+
+.contact-section
+  
+  .section-title
+    color: variables.$golden-500
+    font-size: variables.$font-size-large
+
+  >.contact-infos
+    display: flex
+    gap: 32px
+
+    .contact-container
+      max-width: 440px
+    
+    .social-medias-container
+      .social-medias-title
+        font-size: variables.$font-size-medium
+
+      .social-medias
+        display: flex
+        gap: 18px
+        margin: variables.$margin-medium 0
+
+        >.link
+          color: #000
+  
+  .maps-container
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: variables.$padding-medium 0
+    gap: 16px
+
+    .maps-title
+      font-size: variables.$font-size-large
+
+@media (max-width: variables.$mobile-breakpoint)
+  .contact-infos
+    flex-direction: column
+
+    .contact-container
+      width: 340px
+  
+  .maps-container
+    align-items: flex-start !important
