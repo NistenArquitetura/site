@@ -1,0 +1,28 @@
+@use '../../styles/variables'
+
+.reviews-section
+  >.section-title
+    margin-bottom: variables.$margin-medium
+    color: variables.$golden-500
+    font-size: variables.$font-size-large
+
+  .card-review
+    background-color: #fff
+    border-radius: 4px
+    padding: variables.$padding-medium
+    max-width: 680px
+    height: 180px
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+    .card-client-name
+      font-size: 28px
+
+    .card-message
+      font-weight: 200
+
+@media (max-width: variables.$mobile-breakpoint)
+  .reviews-section
+    .card-review
+      height: 240px

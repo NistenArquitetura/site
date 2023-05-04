@@ -26,8 +26,6 @@ export default function BannersCarrouselSection(){
   if(error) return console.log(error)
   if(loading) return <p>Loading...</p>
 
-  console.log('data 2', data)
-
   return(
     <section className="banners-carrousel-section">
       <Swiper
