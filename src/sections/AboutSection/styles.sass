@@ -1,6 +1,8 @@
 @use '../../styles/variables'
 
 .about-section
+  text-align: justify
+
   >.about-container
     display: flex
     gap: 18px
@@ -13,7 +15,7 @@
 
       .about-text
         background-color: #ffffff95
-        padding: variables.$padding-small 0
+        padding: variables.$padding-small
   
   >.about-individual-container
     display: flex
@@ -33,10 +35,12 @@
         
         .about-text
           background-color: #ffffff95
-          padding: variables.$padding-small 0
+          padding: variables.$padding-small
 
 @media (max-width: variables.$mobile-breakpoint)
   .about-section
+    background-color: #ffffff95
+    
     .about-container
       flex-direction: column
     
