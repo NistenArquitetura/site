@@ -26,7 +26,7 @@ export default function ProjectsListSection(){
         {
           data && data.projetos.map((element, index) => {
             return(
-              <Link to={"/teste"} key={index}>
+              <Link to={`/projetos/${element.id}`} key={index}>
                 <div className="project">
                   <img src={element.imagens[0].url} alt="" className="project-image"/>
                   <div className="project-name-bg">

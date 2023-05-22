@@ -4,7 +4,7 @@ export default function Header(){
   const menuItems = [
     {
       name: 'HOME',
-      route: '#'
+      route: '/'
     },
     {
       name: 'PROJETOS',
@@ -23,7 +23,7 @@ export default function Header(){
   return(
     <header className="header">
       <div className="logo-container">
-        <img src="./images/nisten-logo.png" alt="logo" width={220} className='logo'/>
+        <img src="../images/nisten-logo.png" alt="logo" width={220} className='logo'/>
       </div>
 
       <div className="menus-container">
