@@ -1,6 +1,8 @@
 import './styles.sass'
 
-export default function Header(){
+export default function Header(props){
+  const { noMenus } = props
+
   const menuItems = [
     {
       name: 'HOME',
@@ -25,19 +27,19 @@ export default function Header(){
       <div className="logo-container">
         <img src="../images/nisten-logo.png" alt="logo" width={220} className='logo'/>
       </div>
-
+    { noMenus && noMenus == true ? (null) : (
       <div className="menus-container">
-        {menuItems && menuItems.map((element, index) => {
-          return(     
-            <nav className="nav-item" key={index}>
-              <a href={element.route} className="nav-link">
-                {element.name}
-              </a>
-            </nav>
-          )
-        })}
-      </div>
-
+      {menuItems && menuItems.map((element, index) => {
+        return(     
+          <nav className="nav-item" key={index}>
+            <a href={element.route} className="nav-link">
+              {element.name}
+            </a>
+          </nav>
+        )
+      })}
+    </div>
+    )}
     </header>
   )
 }

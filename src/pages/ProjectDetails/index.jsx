@@ -27,7 +27,7 @@ export default function ProjectDetails(){
 
   return(
     <>
-    <Header/>
+    <Header noMenus={true}/>
     <main>
       <section className="project-details-section">
         <h1 className="section-title">{data.projetos[0].nome}</h1>
