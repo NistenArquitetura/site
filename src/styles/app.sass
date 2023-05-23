@@ -4,6 +4,7 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+  scroll-behavior: smooth
 
 main
   background-image: url('../../images/background-page.jpg')
@@ -21,5 +22,9 @@ main
     font-weight: 500
 
 section
-  padding: variables.$padding-medium
+  padding: variables.$padding-extra-large variables.$padding-medium
   width: 100%
+
+@media (max-width: variables.$mobile-breakpoint)
+  section
+    padding: variables.$padding-large variables.$padding-medium

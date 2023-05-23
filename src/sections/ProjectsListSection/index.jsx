@@ -18,7 +18,7 @@ export default function ProjectsListSection(){
   if(loading) return <p>Loading...</p>
 
   return(
-    <section className="projects-list-section">
+    <section className="projects-list-section" id="projects">
       <h1 className="section-title">Projetos assinados</h1>
       <p className="description">Conheça os projetos assinados pela Nisten Arquitetura</p>
 
