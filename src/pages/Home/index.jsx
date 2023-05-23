@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import AboutSection from "../../sections/AboutSection";
 import BannersCarrouselSection from "../../sections/BannersCarrouselSection";
@@ -16,6 +17,7 @@ export default function Home(){
         <ContactSection/>
         <ReviewsSection/>
       </main>
+      <Footer/>
     </>
   )
 }

@@ -1,0 +1,48 @@
+@use '../../styles/variables'
+
+.footer
+  display: flex
+  flex-direction: column
+  background-color: variables.$rose
+  padding: variables.$padding-medium
+  font-family: variables.$text-font
+
+  .infos-container
+    display: flex
+    justify-content: space-between
+
+    >.infos
+      padding: variables.$padding-medium 0
+      display: flex
+      flex-direction: column
+      gap: 8px
+
+      >.info
+        display: flex
+        align-items: center
+        gap: 8px
+    
+    >.social-medias
+      display: flex
+      gap: 16px
+      align-items: center
+  
+  .brand-container
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    align-items: center
+    margin-top: 12px
+
+@media (max-width: variables.$mobile-breakpoint)
+  .footer
+    gap: 16px
+
+  .infos-container
+    flex-direction: column
+    gap: 16px
+  
+  .brand-container
+    flex-direction: column-reverse !important
+    align-items: flex-start !important
+    gap: 16px
