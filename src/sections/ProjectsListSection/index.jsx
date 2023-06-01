@@ -15,7 +15,22 @@ query MyQuery {
 
 export default function ProjectsListSection(){
   const { data, loading } = useQuery(GET_PROJECTS)
+  const imagesGallery = []
   if(loading) return <p>Loading...</p>
+
+  function createProjectsImagesGallery(){
+    data.projetos.map((element) => {
+      for(let i=0; i < 3; i++){
+        imagesGallery.push({
+          id: element.id,
+          nome: element.nome,
+          imagens: [element.imagens[i].url]
+        })
+      }
+    })
+  }
+
+  createProjectsImagesGallery()
 
   return(
     <section className="projects-list-section" id="projects">
@@ -24,17 +39,21 @@ export default function ProjectsListSection(){
 
       <div className="projects-container">
         {
-          data && data.projetos.map((element, index) => {
-            return(
-              <Link to={`/projetos/${element.id}`} key={index}>
-                <div className="project">
-                  <img src={element.imagens[0].url} alt="" className="project-image"/>
-                  <div className="project-name-bg">
-                    <span className="project-name">{element.nome}</span>
+          imagesGallery && imagesGallery.map((element, index) => { 
+              return(
+                <Link to={`/projetos/${element.id}`} key={index}>
+                  <div className="project">
+                    {element.imagens.map((image, i) => {
+                      return(
+                        <img src={image} alt="" className="project-image" key={i}/>
+                      )
+                    })}
+                    <div className="project-name-bg">
+                      <span className="project-name">{element.nome}</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            )
+                </Link>
+              )
           })
         }
       </div>
