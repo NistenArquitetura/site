@@ -1,4 +1,5 @@
 import './styles.sass'
+import { Link } from 'react-router-dom'
 
 export default function Header(props){
   const { noMenus } = props
@@ -24,9 +25,11 @@ export default function Header(props){
     
   return(
     <header className="header">
-      <div className="logo-container">
-        <img src="../images/nisten-logo.png" alt="logo" width={220} className='logo'/>
-      </div>
+      <Link to="/">
+        <div className="logo-container">
+          <img src="../images/nisten-logo.png" alt="logo" width={220} className='logo'/>
+        </div>
+      </Link>
     { noMenus && noMenus == true ? (null) : (
       <div className="menus-container">
       {menuItems && menuItems.map((element, index) => {
