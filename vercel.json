@@ -1,0 +1,7 @@
+{
+  "routes": [
+    { "src": "/", "dest": "/" },
+    { "src": "/projetos", "dest": "/" },
+    { "src": "/projetos:id", "dest": "/" }
+  ]
+}

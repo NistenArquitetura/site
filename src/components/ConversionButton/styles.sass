@@ -1,0 +1,20 @@
+@use '../../styles/variables'
+
+.conversion-button
+  background-color: variables.$golden-500
+  padding: variables.$padding-small
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  gap: 8px
+  text-decoration: none
+  color: #fff
+  margin: variables.$margin-small 0
+  transition: .3s
+
+  .text
+    font-family: variables.$title-font
+    font-size: 20px
+
+  &:hover
+    background-color: variables.$golden-700

@@ -1,0 +1,52 @@
+@use '../../styles/variables'
+
+.about-section
+  text-align: justify
+
+  >.about-container
+    display: flex
+    gap: 18px
+    padding: variables.$padding-medium 0
+
+    .about-infos
+      .about-section-title
+        color: variables.$golden-500
+        font-size: variables.$font-size-large
+
+      .about-text
+        background-color: #ffffff95
+        padding: variables.$padding-small
+  
+  >.about-individual-container
+    display: flex
+    gap: 32px
+
+    .about-individual
+      max-width: 500px
+
+      .infos
+        display: flex
+        flex-direction: column
+        gap: 4px
+
+        .name
+          color: variables.$golden-500
+          font-size: variables.$font-size-medium
+        
+        .about-text
+          background-color: #ffffff95
+          padding: variables.$padding-small
+
+@media (max-width: variables.$mobile-breakpoint)
+  .about-section
+    background-color: #ffffff95
+    
+    .about-container
+      flex-direction: column
+    
+    .image-container
+      >.about-image
+        max-width: 380px
+    
+    .about-individual-container
+      flex-direction: column
