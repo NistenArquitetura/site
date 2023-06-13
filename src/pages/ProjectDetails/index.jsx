@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client"
 import { Image } from "antd"
 import Header from "../../components/Header"
 import ImageList from "@mui/material/ImageList"
+import Footer from "../../components/Footer"
 import './styles.sass'
 
 const GET_PROJECT = gql`
@@ -27,26 +28,27 @@ export default function ProjectDetails(){
 
   return(
     <>
-    <Header noMenus={true}/>
-    <main>
-      <section className="project-details-section">
-        <h1 className="section-title">{data.projetos[0].nome}</h1>
+      <Header noMenus={true}/>
+      <main>
+        <section className="project-details-section">
+          <h1 className="section-title">{data.projetos[0].nome}</h1>
 
-        <div className="images-container">
-          <ImageList variant="masonry" cols={2} gap={8}>
-            <Image.PreviewGroup>
-              {
-                data.projetos[0] && data.projetos[0].imagens.map((element, index) => {
-                  return(
-                    <Image src={element.url} key={index} rootClassName="img-grid-item"/>
-                  )
-                })
-              }
-            </Image.PreviewGroup>
-          </ImageList>
-        </div>
-      </section>
-    </main>  
+          <div className="images-container">
+            <ImageList variant="masonry" cols={2} gap={8}>
+              <Image.PreviewGroup>
+                {
+                  data.projetos[0] && data.projetos[0].imagens.map((element, index) => {
+                    return(
+                      <Image src={element.url} key={index} rootClassName="img-grid-item"/>
+                    )
+                  })
+                }
+              </Image.PreviewGroup>
+            </ImageList>
+          </div>
+        </section>
+      </main>  
+      <Footer/>
     </>
   )
 }
