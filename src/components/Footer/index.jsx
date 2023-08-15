@@ -4,7 +4,7 @@ export default function Footer(){
   const infos = [
     {
       icon: 'localization',
-      text: 'Edifício comercial Steigleder - R. Aimoré, 60 - sala 104 - Centro, Campo Bom - RS'
+      text: 'Campo Bom - RS'
     },
     {
       icon: 'email',
